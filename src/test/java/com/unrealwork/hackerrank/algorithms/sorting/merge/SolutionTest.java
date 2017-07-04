@@ -7,7 +7,7 @@ import java.util.Random;
 import org.testng.annotations.Test;
 
 
-public class MergeSortTest {
+public class SolutionTest {
 
   @Test
   public void testMergesort() throws Exception {
@@ -18,7 +18,7 @@ public class MergeSortTest {
     }
     Arrays.stream(a).map(random::nextInt).close();
     int[] b = Arrays.copyOf(a, a.length);
-    MergeSort.mergesort(b);
+    Solution.mergesort(b);
     Arrays.sort(a);
     assertArrayEquals(a, b);
   }
